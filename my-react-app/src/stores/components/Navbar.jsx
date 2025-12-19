@@ -1,8 +1,22 @@
 import React from 'react'
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <div>
+    <div className='navSection'>
+        <div className="title">
+            <h2>E-Commerce</h2>
+        </div>
+        <div className="search">
+            <input type="text" placeholder='search...'/>
+        </div>
+        <div className="user">
+            <div className="user-detail">
+                signIN/SignUp
+            </div>
+            <div className="cart">
+                Cart
+            </div>
+        </div>
       
     </div>
   )

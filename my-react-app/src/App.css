@@ -5,3 +5,10 @@
   box-sizing: border-box;
   font-family: 'Rodoto', sans-serif;
 }
+.navSection{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(46, 7, 240);
+  color: white;
+}
