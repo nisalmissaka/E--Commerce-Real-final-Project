@@ -36,7 +36,31 @@ const Navbar = () => {
         </div>
 
       </nav>
+      {/*Sign-up Modal*/}
+      <div className="model fade" id='signupModal' tabIndex='-1' aria-labelledby='signupModalLabel' aria-hidden='true'>
+        <div className="model-dialog model-dialog-centered">
+          <div className="model-content p-4">
+            <div className="model-header border-0">
+              <h5 className="modal-title fw-bold" id='signupModalLabel'>Sigh Up</h5>
+              <button type='button' className='btn-close' data-bs-dismis='modal' aria-label='Close'></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='model-body'>
+        <form>
+          <div className="mb-3">
+            <label className="form-label">Name</label>
+            <input type='text' name="form-control" placeholder='Enter Your Name' required/>
+          </div>
+           <div className="mb-3">
+            <label className="form-label">Email Address</label>
+            <input type='email' name="form-control" placeholder='Enter Email Address' required/>
+          </div>
+        </form>
+      </div>
     </div>
+    
   );
 };
 
