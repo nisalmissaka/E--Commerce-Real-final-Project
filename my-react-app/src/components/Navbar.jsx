@@ -57,7 +57,15 @@ const Navbar = () => {
             <label className="form-label">Email Address</label>
             <input type='email' name="form-control" placeholder='Enter Email Address' required/>
           </div>
+           <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input type='password' name="form-control" placeholder='Enter Password' required/>
+          </div>
+          <p className="text-muted">By sighing up,you agree to our <a href='#' className='text-success text-decoration-none'>Terms</a> & <a href='#' className='text-success text-decoration-none'>Privacy Policy</a>
+          </p>
+          <button type='button' className='btn btn-dark w-100'>Sigh Up</button>
         </form>
+        
       </div>
     </div>
     
