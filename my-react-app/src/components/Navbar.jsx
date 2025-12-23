@@ -1,74 +1,79 @@
 import React from 'react';
+import SignUpModal from '../pages/SignUpModal';
 
 const Navbar = () => {
   return (
-    <div className="nav w-100 fixed-top bg-white shadow-sm">
-      <nav className="navbar navbar-expand-lg navbar-light py-3 px-4">
+    <>
+      <div className="nav w-100 fixed-top bg-dark shadow-lg">
+        <nav className="navbar navbar-expand-lg navbar-dark py-2 px-4">
+          
+          {/* 1. Logo  */}
+          <a href="#" className="navbar-brand fw-bold text-white fs-4" style={{ letterSpacing: "2px" }}>
+            BLUSHIFY
+          </a>
 
-        {/* Logo Left */}
-        <a href="#" className="navbar-brand fw-bold" style={{ letterSpacing: "2px" }}>
-          BLUSHIFY
-        </a>
+          {/* Mobile Toggle Button */}
+          <button
+            className="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <img src="/images/menu.png" alt="Menu" height="25" style={{ filter: "brightness(0) invert(1)" }} />
+          </button>
 
-        {/* Toggle Button for Mobile */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          {/* 2. Collapsible Wrapper */}
+          <div className="collapse navbar-collapse" id="navbarNav">
+            
+            {/* 3. Navigation Links  */}
+            <ul className="navbar-nav mx-auto gap-3 mt-3 mt-lg-0 fw-bold">
+              <li className="nav-item"><a href="#" className="nav-link text-white">Home</a></li>
+              <li className="nav-item"><a href="#" className="nav-link text-white">About</a></li>
+              <li className="nav-item"><a href="#" className="nav-link text-white">Shop</a></li>
+              <li className="nav-item"><a href="#" className="nav-link text-white">Store</a></li>
+              <li className="nav-item"><a href="#" className="nav-link text-white">Blog</a></li>
+              <li className="nav-item"><a href="#" className="nav-link text-white">Contact</a></li>
+            </ul>
 
-        {/* Nav Links Right */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav gap-3">
-            <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">About</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Shop</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Store</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Blog</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Contact</a></li>
-          </ul>
-        </div>
+            {/* 4. Right Side Content  */}
+            <div className="d-flex align-items-center gap-4">
+              
+              {/* Icons */}
+              <div className="d-flex align-items-center gap-3 text-white">
+                <i className="bi bi-search fs-5" style={{ cursor: 'pointer' }}></i>
+                <div className="position-relative">
+                  <i className="bi bi-heart fs-5"></i>
+                  <span className="badge bg-danger position-absolute top-0 start-100 translate-middle p-1 rounded-circle"></span>
+                </div>
+                <div className="position-relative">
+                  <i className="bi bi-bag fs-5"></i>
+                  <span className="badge bg-warning position-absolute top-0 start-100 translate-middle p-1 rounded-circle"></span>
+                </div>
+              </div>
 
-      </nav>
-      {/*Sign-up Modal*/}
-      <div className="model fade" id='signupModal' tabIndex='-1' aria-labelledby='signupModalLabel' aria-hidden='true'>
-        <div className="model-dialog model-dialog-centered">
-          <div className="model-content p-4">
-            <div className="model-header border-0">
-              <h5 className="modal-title fw-bold" id='signupModalLabel'>Sigh Up</h5>
-              <button type='button' className='btn-close' data-bs-dismis='modal' aria-label='Close'></button>
+              {/* Auth Buttons - (Primary, Warning, Danger) */}
+              <div className="d-flex align-items-center gap-2 border-start ps-3" style={{ borderColor: 'rgba(255,255,255,0.2)' }}>
+                <button className="btn btn-primary btn-sm px-3 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  Login
+                </button>
+
+                <button className="btn btn-warning btn-sm px-3 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#signupModal">
+                  Register
+                </button>
+
+                <button className="btn btn-danger btn-sm px-3 fw-bold shadow-sm d-flex align-items-center gap-2">
+                  <i className="bi bi-box-arrow-right"></i>
+                  <span>Logout</span>
+                </button>
+              </div>
+
             </div>
           </div>
-        </div>
+        </nav>
       </div>
-      <div className='model-body'>
-        <form>
-          <div className="mb-3">
-            <label className="form-label">Name</label>
-            <input type='text' name="form-control" placeholder='Enter Your Name' required/>
-          </div>
-           <div className="mb-3">
-            <label className="form-label">Email Address</label>
-            <input type='email' name="form-control" placeholder='Enter Email Address' required/>
-          </div>
-           <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input type='password' name="form-control" placeholder='Enter Password' required/>
-          </div>
-          <p className="text-muted">By sighing up,you agree to our <a href='#' className='text-success text-decoration-none'>Terms</a> & <a href='#' className='text-success text-decoration-none'>Privacy Policy</a>
-          </p>
-          <button type='button' className='btn btn-dark w-100'>Sigh Up</button>
-        </form>
-        
-      </div>
-    </div>
-    
+
+      <SignUpModal />
+    </>
   );
 };
 
