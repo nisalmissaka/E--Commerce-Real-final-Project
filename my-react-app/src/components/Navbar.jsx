@@ -27,9 +27,9 @@ const Navbar = () => {
             
             {/* 3. Navigation Links  */}
             <ul className="navbar-nav mx-auto gap-3 mt-3 mt-lg-0 fw-bold">
-              <li className="nav-item"><a href="#" className="nav-link text-white">Home</a></li>
-              <li className="nav-item"><a href="#" className="nav-link text-white">About</a></li>
-              <li className="nav-item"><a href="#" className="nav-link text-white">Shop</a></li>
+              <li className="nav-item"><a href="/home" className="nav-link text-white">Home</a></li>
+              <li className="nav-item"><a href="/about" className="nav-link text-white">About</a></li>
+              <li className="nav-item"><a href="/shop" className="nav-link text-white">Shop</a></li>
               <li className="nav-item"><a href="#" className="nav-link text-white">Store</a></li>
               <li className="nav-item"><a href="#" className="nav-link text-white">Blog</a></li>
               <li className="nav-item"><a href="#" className="nav-link text-white">Contact</a></li>

@@ -1,8 +1,13 @@
 import React from 'react'
 
-function About() {
+const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <h1>Welcome to BLUSHIFY E-COMMERCE</h1>
+            {/* about  */}
+    </div>
+    
+    
   )
 }
 
