@@ -25,7 +25,8 @@
 }
 html,
 body{
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .nav-wrapper{
   padding: 0 5%;
