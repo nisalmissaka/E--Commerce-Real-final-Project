@@ -13,8 +13,8 @@ const ProductCard = ({ item }) => {
         />
         <div className="card-body d-flex flex-column">
           <h6>{item.title}</h6>
-          <p className="fw-bold">${item.price}</p>
-          <button className="btn btn-primary mt-auto">Add To Cart</button>
+          <p className="fw-bold">RS{item.price}</p>
+          <button className="btn btn-outline-dark">Add To Cart</button>
         </div>
       </div>
     </div>
