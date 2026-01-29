@@ -7,4 +7,3 @@ export const store = configureStore({
     dummy: dummyReducer,
   },
 });
-

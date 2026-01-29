@@ -1,27 +1,129 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Contact = () => {
+  // Button states
+  const [isHovered, setIsHovered] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  
+  // Input focus states (optional, focus එකේදී පාට වෙනස් වීමට)
+  const [focusedInput, setFocusedInput] = useState(null);
+
+  // Styles Object
+  const styles = {
+    container: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      width: '100%',
+      backgroundColor: '#f3f4f6', // Light gray background
+      fontFamily: 'Arial, sans-serif'
+    },
+    formCard: {
+      maxWidth: '400px',
+      width: '90%',
+      padding: '2rem',
+      backgroundColor: '#4b5563', // gray-600
+      borderRadius: '12px',
+      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)'
+    },
+    title: {
+      fontSize: '2rem',
+      textAlign: 'center',
+      color: '#db2777', // pink-600
+      fontWeight: 'bold',
+      marginBottom: '1.5rem'
+    },
+    label: {
+      display: 'block',
+      color: 'white',
+      fontSize: '0.9rem',
+      fontWeight: '600',
+      marginBottom: '0.5rem'
+    },
+    input: (isFocused) => ({
+      width: '100%',
+      padding: '0.8rem',
+      marginBottom: '1rem',
+      backgroundColor: '#1f2937', // gray-800
+      border: `2px solid ${isFocused ? '#3b82f6' : '#374151'}`,
+      borderRadius: '8px',
+      color: 'white',
+      outline: 'none',
+      transition: 'border-color 0.3s ease',
+      boxSizing: 'border-box'
+    }),
+    button: {
+      width: '100%',
+      padding: '0.8rem',
+      backgroundColor: '#2563eb',
+      color: 'white',
+      fontWeight: 'bold',
+      border: 'none',
+      borderRadius: '8px',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease',
+      transform: isActive ? 'scale(0.95)' : 'scale(1)',
+      boxShadow: isHovered ? '0 8px 15px rgba(37, 99, 235, 0.4)' : 'none',
+    }
+  };
+
   return (
-    <div className="max-w-md w-full mx-auto p-6 bg-gray-600 rounded-lg shadow-md"> 
-      <h2 className="text-3xl text-center text-pink-600 font-bold mb-6">Contact Us</h2>
-      <form action="">
-        <div className='mb-4'>
-          <label className="block text-white text--sm font-semibold mb-2" htmlFor="" >Your Name</label>
-          <input placeholder='nisal' className='w-full px-3 py-2 border rounded-lg bg-gray-800 focus:border-blue-500' required type="text" />
-        </div>
-        <div className='mb-4'>
-          <label className="block text-white text--sm font-semibold mb-2" htmlFor="" >Your Email</label>
-          <input placeholder='nisal@gmail.com' className='w-full px-3 py-2 border rounded-lg bg-gray-800 focus:border-blue-500' required type="email" />
-        </div>
-        <div className='mb-4'>
-          <label className="block text-white text--sm font-semibold mb-2" htmlFor="" >Your Massage</label>
-          <textarea rows='4'  placeholder='type your massage' className='w-full px-3 py-2 border rounded-lg bg-gray-800 focus:border-blue-500' required type="text" />
-        </div>
-        <div className='flex justify-center'>
-          <button type='submit' className='bg-pink-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-pink-600 foucus:outline-white'>Send Massage</button>
-        </div>
-      </form>
-    </div> 
-  )
-}
-export default Contact
+    <div style={styles.container}>
+      <div style={styles.formCard}>
+        <h2 style={styles.title}>Contact Us</h2>
+        
+        <form onSubmit={(e) => e.preventDefault()}>
+          <div>
+            <label style={styles.label}>Your Name</label>
+            <input 
+              type="text" 
+              placeholder="nisal"
+              style={styles.input(focusedInput === 'name')}
+              onFocus={() => setFocusedInput('name')}
+              onBlur={() => setFocusedInput(null)}
+              required 
+            />
+          </div>
+
+          <div>
+            <label style={styles.label}>Your Email</label>
+            <input 
+              type="email" 
+              placeholder="nisal@gmail.com"
+              style={styles.input(focusedInput === 'email')}
+              onFocus={() => setFocusedInput('email')}
+              onBlur={() => setFocusedInput(null)}
+              required 
+            />
+          </div>
+
+          <div>
+            <label style={styles.label}>Your Message</label>
+            <textarea 
+              rows="4" 
+              placeholder="type your message"
+              style={{...styles.input(focusedInput === 'message'), resize: 'none'}}
+              onFocus={() => setFocusedInput('message')}
+              onBlur={() => setFocusedInput(null)}
+              required 
+            />
+          </div>
+
+          <button
+            type="submit"
+            style={styles.button}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onMouseDown={() => setIsActive(true)}
+            onMouseUp={() => setIsActive(false)}
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
