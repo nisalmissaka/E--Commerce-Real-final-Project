@@ -1,0 +1,117 @@
+/* Container */
+.faq-wrapper {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    /* Wrapper eka light color thibbama thamai Header eka black wela penne */
+    background-color: #f9f9f9; 
+    min-height: 100vh;
+}
+
+/* Header Section */
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-header h1 {
+    font-size: 2.4rem;
+    /* Main Title eka Black kala */
+    color: #000000 !important; 
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.faq-header p {
+    color: #555555;
+    font-size: 1.1rem;
+}
+
+
+.faq-item {
+    background: #1a1a1a !important;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #3b82f6;
+    background: #222222 !important;
+}
+
+.faq-item.active {
+    border-color: #3b82f6;
+    background: #111827 !important;
+}
+
+/* Question Section */
+.faq-question-section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Shipping, Payments wage labels */
+.faq-badge {
+    display: inline-block;
+    background: #1e3a8a;
+    color: #60a5fa !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* Prashna tika White karala thiyenne methanin */
+.faq-question-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff !important; 
+    margin: 0;
+}
+
+/* Icon Animation (+ and - icons) */
+.faq-icon {
+    width: 32px;
+    height: 32px;
+    background: #333333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #ffffff !important; /* Icon eka White kala */
+    transition: transform 0.3s ease;
+}
+
+.faq-icon.rotate {
+    transform: rotate(45deg);
+    background: #3b82f6;
+    color: #ffffff !important;
+}
+
+/* Answer Section Animation */
+.faq-answer-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-answer-section.show {
+    max-height: 300px;
+}
+
+.faq-answer-inner {
+    padding: 0 20px 20px 20px;
+    /* Answer ekath White kala */
+    color: #ffffff !important; 
+    line-height: 1.6;
+    font-size: 1rem;
+}

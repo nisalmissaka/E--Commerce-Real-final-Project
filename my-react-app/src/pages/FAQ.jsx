@@ -1,4 +1,5 @@
 import React, { useState } from 'react'; 
+import './FAQ.css';
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -31,8 +32,8 @@ const FAQ = () => {
     };
 
     return (
-        <div className='faq-container' style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-            <div className='faq-header' style={{ textAlign: 'center', marginBottom: '30px' }}>
+        <div className='faq-wrapper'>
+            <div className='faq-header'>
                 <h1>Frequently Asked Questions</h1>
                 <p>Everything you need to know about our products and services</p>
             </div>
@@ -43,22 +44,23 @@ const FAQ = () => {
                         key={index} 
                         className={`faq-item ${activeIndex === index ? 'active' : ''}`}
                         onClick={() => toggleAccordion(index)}
-                        style={{ borderBottom: '1px solid #ddd', padding: '15px', cursor: 'pointer' }}
                     >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      
+                        <div className="faq-question-section">
                             <div>
-                                <small style={{ color: 'blue', fontWeight: 'bold' }}>{item.category}</small>
-                                <h3 style={{ margin: '5px 0' }}>{item.question}</h3>
+                                <span className="faq-badge">{item.category}</span>
+                                <h3 className="faq-question-text">{item.question}</h3>
                             </div>
-                            <span style={{ fontSize: '20px' }}>{activeIndex === index ? '−' : '+'}</span>
+                            <div className={`faq-icon ${activeIndex === index ? 'rotate' : ''}`}>
+                                {activeIndex === index ? '−' : '+'}
+                            </div>
                         </div>
-                        
-                       
-                        {activeIndex === index && (
-                            <div style={{ marginTop: '10px', color: '#555', background: '#f9f9f9', padding: '10px' }}>
+                     
+                        <div className={`faq-answer-section ${activeIndex === index ? 'show' : ''}`}>
+                            <div className="faq-answer-inner">
                                 <p>{item.answer}</p>
                             </div>
-                        )}
+                        </div>
                     </div>
                 ))}
             </div>
