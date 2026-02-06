@@ -1,4 +1,5 @@
 import React from 'react'
+import './OrderTable.css'
 
 const OrderTable = () => {
   const orders = [

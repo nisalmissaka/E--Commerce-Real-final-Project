@@ -1,0 +1,47 @@
+.table-container{
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(red, green, blue, alpha);
+    margin: 20px;
+}
+.title{
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.order-table th, .order-table td{
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    color: #ffff;
+}
+.order-table thead{
+    background-color: #f8f9fa;    
+}
+.order-id{
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.status.delivered { background-color: #d4edda; color: #155724; }
+.status.shipped { background-color: #d1ecf1; color: #0c5460; }
+.status.processing { background-color: #fff3cd; color: #856404; }
+.status.cancelled { background-color: #f8d7da; color: #721c24; }
+
+.view-btn{
+    background-color: #333;
+    color: #ddd;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.view-btn:hover{
+    background-color: #555;
+}
+.order-table th{
+    font-weight: bold;
+    background-color: white;
+}
