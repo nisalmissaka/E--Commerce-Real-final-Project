@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const SignUpModal = () => {
   return (
     <div className="modal fade" id="signupModal" tabIndex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
@@ -38,5 +39,6 @@ const SignUpModal = () => {
     </div>
   );
 };
+
 
 export default SignUpModal;

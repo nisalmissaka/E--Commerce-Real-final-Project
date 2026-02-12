@@ -1,5 +1,5 @@
 import React from 'react';
-import SignUpModal from '../pages/SignUpModal';
+import SignUpModal from '../pages/SignUpModel';
 
 const Navbar = () => {
   return (
@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="nav w-100 fixed-top bg-dark shadow-lg">
         <nav className="navbar navbar-expand-lg navbar-dark py-2 px-4">
           
-          {/* 1. Logo  */}
+          {/* 1. Logo */}
           <a href="#" className="navbar-brand fw-bold text-white fs-4" style={{ letterSpacing: "2px" }}>
             BLUSHIFY
           </a>
@@ -25,7 +25,7 @@ const Navbar = () => {
           {/* 2. Collapsible Wrapper */}
           <div className="collapse navbar-collapse" id="navbarNav">
             
-            {/* 3. Navigation Links  */}
+            {/* 3. Navigation Links */}
             <ul className="navbar-nav mx-auto gap-3 mt-3 mt-lg-0 fw-bold">
               <li className="nav-item"><a href="/home" className="nav-link text-white">Home</a></li>
               <li className="nav-item"><a href="/about" className="nav-link text-white">About</a></li>
@@ -35,7 +35,7 @@ const Navbar = () => {
               <li className="nav-item"><a href="/contact" className="nav-link text-white">Contact</a></li>
             </ul>
 
-            {/* 4. Right Side Content  */}
+            {/* 4. Right Side Content */}
             <div className="d-flex align-items-center gap-4">
               
               {/* Icons */}
@@ -51,7 +51,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Auth Buttons - (Primary, Warning, Danger) */}
+              {/* Auth Buttons */}
               <div className="d-flex align-items-center gap-2 border-start ps-3" style={{ borderColor: 'rgba(255,255,255,0.2)' }}>
                 <button className="btn btn-primary btn-sm px-3 fw-bold shadow-sm" data-bs-toggle="modal" data-bs-target="#loginModal">
                   Login
