@@ -19,7 +19,7 @@ const About = () => {
             <div className="story-text">
               <h2>Our Fashion Journey</h2>
               <p>
-                Founded in 2018, StyleHub emerged from a simple idea: to make 
+                Founded in 2026, StyleHub emerged from a simple idea: to make 
                 quality fashion accessible to every Sri Lankan. What began as a 
                 small online boutique has blossomed into Sri Lanka's favorite 
                 online clothing store.

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 
 const Contact = () => {
-  // Button states
+ 
   const [isHovered, setIsHovered] = useState(false);
   const [isActive, setIsActive] = useState(false);
   
-  // Input focus states (optional, focus එකේදී පාට වෙනස් වීමට)
+
   const [focusedInput, setFocusedInput] = useState(null);
 
-  // Styles Object
   const styles = {
     container: {
       display: 'flex',
@@ -16,7 +15,7 @@ const Contact = () => {
       justifyContent: 'center',
       minHeight: '100vh',
       width: '100%',
-      backgroundColor: '#f3f4f6', // Light gray background
+      backgroundColor: '#f3f4f6', 
       fontFamily: 'Arial, sans-serif'
     },
     formCard: {

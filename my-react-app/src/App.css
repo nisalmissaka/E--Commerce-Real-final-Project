@@ -20,3 +20,52 @@ body{
     border-radius: 5px;
     padding: 10px;
 }
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1e2f 0%, #2d2d44 100%);
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+.login-header h2 {
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #5750d8;
+}
+
+.input-group-text {
+  border-right: none;
+}
+
+.form-control {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}

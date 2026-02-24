@@ -112,7 +112,7 @@ const Shop = () => {
     
     <div className="container mt-5 pt-5 mb-5">
       <header className="text-center mb-5">
-        <h1 className="display-6 fw-bolder">Sri Lankan Heritage Shop</h1>
+        <h1 className="display-6 fw-bolder">Sri Lankan BLUSHIFY Shop</h1>
         <hr className="w-25 mx-auto" />
       </header>
 
